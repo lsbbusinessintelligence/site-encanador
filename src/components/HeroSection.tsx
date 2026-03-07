@@ -1,7 +1,7 @@
-import { motion } from "framer-motion";
+Ôªøimport { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 
-const WHATSAPP_URL = "https://wa.me/5511914693294?text=Ol%C3%A1!%20Preciso%20de%20um%20encanador%20em%20S%C3%A3o%20Paulo.%20Vi%20o%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.";
+const WHATSAPP_URL = "https://wa.me/5511914693294?text=Ol√°!%20Preciso%20de%20um%20encanador%20em%20S√£o%20Paulo.%20Vi%20o%20site%20e%20gostaria%20de%20solicitar%20um%20or√ßamento.";
 
 const HeroSection = () => (
   <section className="relative overflow-hidden min-h-[90vh] flex items-center bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-900">
@@ -17,16 +17,16 @@ const HeroSection = () => (
           transition={{ duration: 0.7 }}
         >
           <span className="inline-block mb-6 px-4 py-1.5 rounded-full text-sm font-medium bg-cyan-400/15 text-cyan-300 border border-cyan-400/20">
-            Atendimento R·pido
+            Atendimento R√°pido
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white mb-6">
-            Encanador em S„o Paulo{" "}
+            Encanador em S√£o Paulo{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-300">
-              com Atendimento R·pido
+              com Atendimento R√°pido
             </span>
           </h1>
           <p className="text-lg md:text-xl text-blue-100/80 mb-10 max-w-2xl">
-            Conserto de vazamentos, desentupimentos e manutenÁ„o hidr·ulica com atendimento r·pido em S„o Paulo e regi„o.
+            Conserto de vazamentos, desentupimentos e manuten√ß√£o hidr√°ulica com atendimento r√°pido em S√£o Paulo e regi√£o.
           </p>
           <a
             href={WHATSAPP_URL}
@@ -43,18 +43,18 @@ const HeroSection = () => (
             }}
           >
             <MessageCircle className="w-5 h-5" />
-            Solicitar OrÁamento no WhatsApp
+            Solicitar Or√ßamento no WhatsApp
           </a>
         </motion.div>
 
-        {/* Avatar do Encanador */}
+        {/* Avatar do Encanador Realista */}
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
           className="hidden lg:flex flex-col items-center gap-6"
         >
-          {/* Caixa de di·logo ACIMA */}
+          {/* Caixa de di√°logo ACIMA */}
           <div className="relative max-w-[280px]">
             <div className="bg-white/95 backdrop-blur-sm border-2 border-cyan-400/40 rounded-xl p-4 shadow-xl relative">
               <p className="text-gray-800 text-sm text-center leading-relaxed">
@@ -64,94 +64,114 @@ const HeroSection = () => (
             </div>
           </div>
           
-          {/* Avatar do Encanador - 350x420px */}
+          {/* Avatar Realista do Encanador em C√≠rculo Azul */}
           <div className="relative">
-            <svg width="350" height="420" viewBox="0 0 200 240" className="drop-shadow-2xl">
-              {/* Sombra */}
-              <ellipse cx="100" cy="220" rx="60" ry="15" fill="#00000020"/>
+            <svg width="320" height="320" viewBox="0 0 320 320" className="drop-shadow-2xl">
+              {/* C√≠rculo de fundo azul */}
+              <circle cx="160" cy="160" r="155" fill="#0284c7" opacity="0.9"/>
+              <circle cx="160" cy="160" r="145" fill="#0ea5e9"/>
               
-              {/* Pernas - calÁa azul */}
-              <rect x="75" y="180" width="20" height="50" fill="#1e40af" rx="10"/>
-              <rect x="105" y="180" width="20" height="50" fill="#1e40af" rx="10"/>
+              {/* Corpo - Macac√£o azul */}
+              <rect x="90" y="200" width="140" height="110" fill="#1e40af" rx="8"/>
               
-              {/* Botas de borracha azuis */}
-              <ellipse cx="85" cy="230" rx="14" ry="10" fill="#0369a1"/>
-              <ellipse cx="115" cy="230" rx="14" ry="10" fill="#0369a1"/>
-              <rect x="78" y="222" width="14" height="4" fill="#0ea5e9"/>
-              <rect x="108" y="222" width="14" height="4" fill="#0ea5e9"/>
+              {/* Bolso do macac√£o */}
+              <rect x="115" y="220" width="35" height="30" fill="#1e3a8a" rx="3"/>
+              <rect x="170" y="220" width="35" height="30" fill="#1e3a8a" rx="3"/>
+              <circle cx="125" cy="228" r="2" fill="#64748b"/>
+              <circle cx="180" cy="228" r="2" fill="#64748b"/>
               
-              {/* Tronco - camisa cinza */}
-              <rect x="65" y="110" width="70" height="75" fill="#64748b" rx="12"/>
+              {/* Al√ßas do macac√£o */}
+              <rect x="110" y="170" width="15" height="40" fill="#1e40af" rx="7"/>
+              <rect x="195" y="170" width="15" height="40" fill="#1e40af" rx="7"/>
+              <circle cx="117.5" cy="175" r="5" fill="#fbbf24"/>
+              <circle cx="202.5" cy="175" r="5" fill="#fbbf24"/>
               
-              {/* Bolsos da camisa */}
-              <rect x="72" y="120" width="22" height="16" fill="#475569" rx="2"/>
-              <rect x="106" y="120" width="22" height="16" fill="#475569" rx="2"/>
+              {/* Camisa branca */}
+              <path d="M 110 170 Q 110 160 125 155 L 195 155 Q 210 160 210 170 L 210 200 L 110 200 Z" fill="#f8fafc"/>
               
-              {/* BraÁo direito segurando chave inglesa */}
-              <ellipse cx="145" cy="135" rx="13" ry="38" fill="#64748b" transform="rotate(25 145 135)"/>
-              <circle cx="156" cy="120" r="11" fill="#d4a574"/>
+              {/* Gola da camisa */}
+              <path d="M 145 155 L 150 145 L 160 140 L 170 145 L 175 155" fill="#e2e8f0" stroke="#cbd5e1" strokeWidth="1"/>
               
-              {/* Chave inglesa grande */}
-              <rect x="153" y="110" width="5" height="26" fill="#94a3b8" rx="2" transform="rotate(25 156 123)"/>
-              <path d="M 154 108 L 148 104 L 150 110 Z" fill="#94a3b8"/>
-              <circle cx="170" cy="128" r="6" fill="#cbd5e1"/>
+              {/* Bra√ßo direito com chave inglesa */}
+              <ellipse cx="230" cy="195" rx="18" ry="55" fill="#1e40af" transform="rotate(35 230 195)"/>
+              <circle cx="245" cy="170" r="16" fill="#a67c52"/>
               
-              {/* BraÁo esquerdo segurando cano */}
-              <ellipse cx="55" cy="145" rx="13" ry="40" fill="#64748b" transform="rotate(-25 55 145)"/>
-              <circle cx="47" cy="170" r="11" fill="#d4a574"/>
+              {/* Chave inglesa laranja/vermelha grande */}
+              <g transform="rotate(45 255 160)">
+                <rect x="245" y="145" width="10" height="50" fill="#dc2626" rx="5"/>
+                <rect x="245" y="145" width="10" height="50" fill="#ef4444" rx="5" opacity="0.7"/>
+                <path d="M 243 143 L 235 138 L 238 148 Z" fill="#dc2626"/>
+                <circle cx="268" cy="195" r="12" fill="#f87171" opacity="0.8"/>
+                <circle cx="268" cy="195" r="8" fill="#dc2626"/>
+                <rect x="250" y="160" width="6" height="3" fill="#fbbf24"/>
+              </g>
               
-              {/* Cano azul na m„o */}
-              <rect x="42" y="165" width="8" height="28" fill="#0ea5e9" rx="4" transform="rotate(-15 46 179)"/>
-              <ellipse cx="44" cy="165" rx="4" ry="3" fill="#06b6d4"/>
-              <ellipse cx="48" cy="193" rx="4" ry="3" fill="#0284c7"/>
+              {/* Bra√ßo esquerdo */}
+              <ellipse cx="90" cy="200" rx="18" ry="55" fill="#1e40af" transform="rotate(-25 90 200)"/>
+              <circle cx="75" cy="225" r="16" fill="#a67c52"/>
+              <ellipse cx="75" cy="225" rx="12" ry="16" fill="#a67c52"/>
               
-              {/* Cinto de ferramentas marrom */}
-              <rect x="68" y="108" width="64" height="9" fill="#92400e" rx="2"/>
-              <rect x="82" y="112" width="8" height="16" fill="#b45309"/>
-              <rect x="98" y="112" width="8" height="16" fill="#b45309"/>
-              <rect x="114" y="112" width="8" height="16" fill="#b45309"/>
+              {/* Polegar levantado */}
+              <rect x="68" y="208" width="8" height="15" fill="#a67c52" rx="4" transform="rotate(-20 72 215)"/>
               
-              {/* PescoÁo */}
-              <rect x="86" y="95" width="28" height="18" fill="#d4a574" rx="6"/>
+              {/* Pesco√ßo */}
+              <rect x="135" y="135" width="50" height="25" fill="#a67c52" rx="10"/>
               
-              {/* CabeÁa */}
-              <circle cx="100" cy="75" r="34" fill="#d4a574"/>
+              {/* Cabe√ßa - cor parda */}
+              <ellipse cx="160" cy="110" rx="45" ry="55" fill="#a67c52"/>
               
               {/* Orelhas */}
-              <ellipse cx="68" cy="75" rx="7" ry="12" fill="#d4a574"/>
-              <ellipse cx="132" cy="75" rx="7" ry="12" fill="#d4a574"/>
+              <ellipse cx="120" cy="110" rx="12" ry="18" fill="#a67c52"/>
+              <ellipse cx="200" cy="110" rx="12" ry="18" fill="#a67c52"/>
+              <ellipse cx="122" cy="110" rx="7" ry="12" fill="#8b5e3c"/>
+              <ellipse cx="198" cy="110" rx="7" ry="12" fill="#8b5e3c"/>
               
-              {/* BonÈ azul */}
-              <path d="M 70 68 Q 70 42 100 40 Q 130 42 130 68 L 132 72 L 68 72 Z" fill="#0ea5e9"/>
-              <ellipse cx="100" cy="72" rx="32" ry="8" fill="#0284c7"/>
-              <rect x="68" y="70" width="64" height="3" fill="#0369a1"/>
+              {/* Bon√© azul profissional */}
+              <ellipse cx="160" cy="75" rx="50" ry="15" fill="#1e40af"/>
+              <path d="M 115 75 Q 115 45 160 42 Q 205 45 205 75 Z" fill="#2563eb"/>
+              <ellipse cx="160" cy="42" rx="45" ry="12" fill="#3b82f6"/>
+              <rect x="115" y="72" width="90" height="6" fill="#1e3a8a" rx="2"/>
               
-              {/* Aba do bonÈ */}
-              <ellipse cx="100" cy="82" rx="40" ry="6" fill="#0369a1" opacity="0.8"/>
+              {/* Logo no bon√© (gota d'√°gua) */}
+              <path d="M 160 52 Q 155 58 155 62 Q 155 68 160 68 Q 165 68 165 62 Q 165 58 160 52 Z" fill="#06b6d4"/>
               
-              {/* Logo de gota no bonÈ */}
-              <path d="M 100 48 Q 95 54 95 58 Q 95 62 100 62 Q 105 62 105 58 Q 105 54 100 48 Z" fill="#06b6d4"/>
+              {/* Aba do bon√© */}
+              <ellipse cx="160" cy="85" rx="55" ry="10" fill="#1e40af" opacity="0.9"/>
               
-              {/* Olhos */}
-              <circle cx="88" cy="76" r="4" fill="#1e293b"/>
-              <circle cx="112" cy="76" r="4" fill="#1e293b"/>
-              <circle cx="89" cy="75" r="1.5" fill="#ffffff"/>
-              <circle cx="113" cy="75" r="1.5" fill="#ffffff"/>
+              {/* Cabelo */}
+              <path d="M 118 78 Q 115 75 115 70" stroke="#1e293b" strokeWidth="4" fill="none" strokeLinecap="round"/>
+              <path d="M 202 78 Q 205 75 205 70" stroke="#1e293b" strokeWidth="4" fill="none" strokeLinecap="round"/>
               
               {/* Sobrancelhas */}
-              <path d="M 82 70 Q 88 68 94 70" stroke="#78350f" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
-              <path d="M 106 70 Q 112 68 118 70" stroke="#78350f" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
+              <path d="M 135 95 Q 142 92 150 94" stroke="#1e293b" strokeWidth="4" fill="none" strokeLinecap="round"/>
+              <path d="M 170 94 Q 178 92 185 95" stroke="#1e293b" strokeWidth="4" fill="none" strokeLinecap="round"/>
+              
+              {/* Olhos expressivos */}
+              <ellipse cx="145" cy="105" rx="8" ry="11" fill="white"/>
+              <ellipse cx="175" cy="105" rx="8" ry="11" fill="white"/>
+              <circle cx="145" cy="107" r="6" fill="#3b2818"/>
+              <circle cx="175" cy="107" r="6" fill="#3b2818"/>
+              <circle cx="147" cy="105" r="3" fill="white" opacity="0.9"/>
+              <circle cx="177" cy="105" r="3" fill="white" opacity="0.9"/>
               
               {/* Nariz */}
-              <ellipse cx="100" cy="84" rx="5" ry="7" fill="#c4915f"/>
+              <path d="M 160 105 L 156 120 Q 160 123 164 120 L 160 105" fill="#8b5e3c"/>
+              <ellipse cx="155" cy="120" rx="3" ry="4" fill="#704a2f"/>
+              <ellipse cx="165" cy="120" rx="3" ry="4" fill="#704a2f"/>
               
-              {/* Bigode */}
-              <path d="M 85 90 Q 100 88 115 90" stroke="#78350f" strokeWidth="3" fill="none" strokeLinecap="round"/>
-              <path d="M 85 90 Q 80 92 75 93" stroke="#78350f" strokeWidth="3" fill="none" strokeLinecap="round"/>
-              <path d="M 115 90 Q 120 92 125 93" stroke="#78350f" strokeWidth="3" fill="none" strokeLinecap="round"/>
+              {/* Boca sorridente grande */}
+              <path d="M 140 130 Q 160 142 180 130" stroke="#1e293b" strokeWidth="3" fill="none" strokeLinecap="round"/>
+              <path d="M 142 132 Q 160 140 178 132" fill="white" opacity="0.3"/>
               
-              {/* Boca sorrindo */}
-              <path d="M 88 96 Q 100 101 112 96" stroke="#78350f" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
+              {/* Dentes do sorriso */}
+              <rect x="152" y="134" width="4" height="5" fill="white" rx="1"/>
+              <rect x="157" y="135" width="4" height="5" fill="white" rx="1"/>
+              <rect x="162" y="135" width="4" height="5" fill="white" rx="1"/>
+              
+              {/* Sombras faciais para realismo */}
+              <ellipse cx="160" cy="125" rx="35" ry="8" fill="#000000" opacity="0.08"/>
+              <path d="M 130 110 Q 135 115 135 120" stroke="#000000" strokeWidth="2" opacity="0.1" fill="none"/>
+              <path d="M 190 110 Q 185 115 185 120" stroke="#000000" strokeWidth="2" opacity="0.1" fill="none"/>
             </svg>
             
             <div className="text-center mt-2">

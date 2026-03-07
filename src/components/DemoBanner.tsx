@@ -1,37 +1,40 @@
-import { MessageCircle, Droplet } from "lucide-react";
+﻿import { MessageCircle, Droplet } from "lucide-react";
+
+const WHATSAPP_URL = "https://wa.me/5511914693294?text=Olá!%20Vi%20o%20site%20de%20demonstração%20de%20encanador%20e%20gostaria%20de%20criar%20um%20site%20profissional%20para%20meu%20negócio.";
 
 const DemoBanner = () => {
-  const WHATSAPP_URL = "https://wa.me/5511914693294?text=Ol%C3%A1!%20Vi%20o%20site%20demonstra%C3%A7%C3%A3o%20do%20encanador%20e%20quero%20criar%20um%20site%20igual%20para%20meu%20neg%C3%B3cio!";
+  const handleClick = () => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'click_demo_cta', {
+        event_category: 'lead',
+        event_label: 'banner_demo_encanador'
+      });
+    }
+  };
 
   return (
-    <div className="bg-gradient-to-r from-cyan-500/10 via-blue-400/10 to-cyan-500/10 border-b border-cyan-500/20 backdrop-blur-sm">
-      <div className="container py-3 px-4">
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 text-center sm:text-left">
-          <div className="flex items-center gap-2">
-            <Droplet className="w-4 h-4 text-cyan-600 flex-shrink-0 animate-pulse" />
-            <p className="text-xs sm:text-sm text-foreground">
-              <span className="font-semibold">Este � um site de demonstra��o</span> criado pela LSB Business Intelligence.
-              <span className="hidden sm:inline"> Podemos criar um igual para seu neg�cio em 7 dias.</span>
-            </p>
+    <div className="bg-gradient-to-r from-blue-900 via-cyan-800 to-blue-900 border-b-4 border-cyan-400 py-3 px-4 shadow-xl">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
+        <div className="flex items-center gap-3 text-white">
+          <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 py-1.5 rounded-full border border-white/20">
+            <Droplet className="w-5 h-5 text-cyan-300" />
+            <span className="font-semibold text-sm">Site de Demonstração</span>
           </div>
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-1.5 bg-cyan-600 hover:bg-cyan-500 text-white font-semibold text-sm rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl whitespace-nowrap"
-            onClick={() => {
-              if (typeof window !== 'undefined' && (window as any).gtag) {
-                (window as any).gtag('event', 'click_whatsapp', {
-                  event_category: 'lead',
-                  event_label: 'demo_banner_criar_site'
-                });
-              }
-            }}
-          >
-            <MessageCircle className="w-4 h-4" />
-            Criar meu site
-          </a>
+          <p className="text-sm md:text-base">
+            Este é um exemplo de site para <span className="font-bold">encanadores</span>
+          </p>
         </div>
+        
+        <a
+          href={WHATSAPP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={handleClick}
+          className="flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-white font-semibold px-6 py-2.5 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl whitespace-nowrap text-sm md:text-base"
+        >
+          <MessageCircle className="w-4 h-4" />
+          Podemos criar um igual para seu negócio em 7 dias
+        </a>
       </div>
     </div>
   );

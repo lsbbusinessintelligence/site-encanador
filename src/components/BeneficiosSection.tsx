@@ -1,26 +1,26 @@
-import { motion } from "framer-motion";
+ï»¿import { motion } from "framer-motion";
 import { Clock, Award, DollarSign, MapPin } from "lucide-react";
 
 const benefits = [
   {
     icon: Clock,
-    title: "Atendimento Rápido",
-    description: "Atendemos sua emergência hidráulica com agilidade em toda São Paulo."
+    title: "Atendimento RÃ¡pido",
+    description: "Atendemos sua emergÃªncia hidrÃ¡ulica com agilidade em toda SÃ£o Paulo."
   },
   {
     icon: Award,
     title: "Profissional Experiente",
-    description: "Mais de 10 anos de experiência em serviços hidráulicos residenciais e comerciais."
+    description: "Mais de 10 anos de experiÃªncia em serviÃ§os hidrÃ¡ulicos residenciais e comerciais."
   },
   {
     icon: DollarSign,
-    title: "Orçamento Gratuito",
-    description: "Avaliamos seu problema e fornecemos orçamento sem compromisso."
+    title: "OrÃ§amento Gratuito",
+    description: "Avaliamos seu problema e fornecemos orÃ§amento sem compromisso."
   },
   {
     icon: MapPin,
     title: "Atendimento em SP",
-    description: "Atendemos toda São Paulo e região metropolitana com rapidez."
+    description: "Atendemos toda SÃ£o Paulo e regiÃ£o metropolitana com rapidez."
   }
 ];
 
@@ -35,10 +35,10 @@ const BeneficiosSection = () => (
         className="text-center mb-16"
       >
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          Por que escolher nossos <span className="text-cyan-600">serviços</span>?
+          Por que escolher nossos <span className="text-cyan-600">serviÃ§os</span>?
         </h2>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          Qualidade, confiança e rapidez no atendimento
+          Qualidade, confianÃ§a e rapidez no atendimento
         </p>
       </motion.div>
 

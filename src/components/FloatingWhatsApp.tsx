@@ -1,35 +1,44 @@
+﻿import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
-const WHATSAPP_URL = "https://wa.me/5511914693294?text=Ol%C3%A1!%20Preciso%20de%20um%20eletricista.%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento.";
+const WHATSAPP_URL = "https://wa.me/5511914693294?text=Olá!%20Vi%20seu%20site%20e%20preciso%20de%20um%20encanador%20em%20São%20Paulo.";
 
 const FloatingWhatsApp = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true), 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleClick = () => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'click_whatsapp', {
+        event_category: 'lead',
+        event_label: 'botao_flutuante'
+      });
+    }
+  };
+
+  if (!isVisible) return null;
+
   return (
     <motion.a
       href={WHATSAPP_URL}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 flex items-center justify-center gap-3 px-6 py-4 bg-[#25D366] hover:bg-[#20BA5A] text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 group"
+      onClick={handleClick}
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
-      transition={{ duration: 0.3, delay: 1 }}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-      title="Falar no WhatsApp"
-      onClick={() => {
-        if (typeof window !== 'undefined' && (window as any).gtag) {
-          (window as any).gtag('event', 'click_whatsapp', {
-            event_category: 'lead',
-            event_label: 'botao_whatsapp_flutuante'
-          });
-        }
-      }}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+      className="fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-5 py-4 rounded-full shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300"
     >
-      <MessageCircle className="w-8 h-8 relative z-10" />
-      <span className="font-semibold text-lg whitespace-nowrap relative z-10">
-        Falar no WhatsApp
+      <MessageCircle className="w-6 h-6 animate-pulse" />
+      <span className="font-semibold hidden sm:inline">
+        Chamar no WhatsApp
       </span>
-      <div className="absolute inset-0 bg-[#25D366]/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
     </motion.a>
   );
 };

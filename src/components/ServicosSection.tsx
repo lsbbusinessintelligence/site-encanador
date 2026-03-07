@@ -1,36 +1,36 @@
-import { motion } from "framer-motion";
+ï»¿import { motion } from "framer-motion";
 import { Droplets, Wrench, Waves, AlertCircle, Settings, Package } from "lucide-react";
 
 const services = [
   {
     icon: Droplets,
     title: "Conserto de Vazamentos",
-    description: "Detecção e reparo de vazamentos em tubulações, torneiras e registros."
+    description: "DetecÃ§Ã£o e reparo de vazamentos em tubulaÃ§Ãµes, torneiras e registros."
   },
   {
     icon: Waves,
     title: "Desentupimento de Pias",
-    description: "Desentupimento rápido de pias, ralos e esgotos com equipamento profissional."
+    description: "Desentupimento rÃ¡pido de pias, ralos e esgotos com equipamento profissional."
   },
   {
     icon: Wrench,
-    title: "Instalação de Torneiras",
-    description: "Instalação e troca de torneiras, misturadores e metais sanitários."
+    title: "InstalaÃ§Ã£o de Torneiras",
+    description: "InstalaÃ§Ã£o e troca de torneiras, misturadores e metais sanitÃ¡rios."
   },
   {
     icon: AlertCircle,
     title: "Reparo de Descarga",
-    description: "Conserto de descargas, válvulas e caixas acopladas com garantia."
+    description: "Conserto de descargas, vÃ¡lvulas e caixas acopladas com garantia."
   },
   {
     icon: Settings,
-    title: "Manutenção Hidráulica",
-    description: "Manutenção preventiva e corretiva em sistemas hidráulicos residenciais."
+    title: "ManutenÃ§Ã£o HidrÃ¡ulica",
+    description: "ManutenÃ§Ã£o preventiva e corretiva em sistemas hidrÃ¡ulicos residenciais."
   },
   {
     icon: Package,
-    title: "Instalação de Caixa d'Água",
-    description: "Instalação, limpeza e manutenção de caixas d'água e reservatórios."
+    title: "InstalaÃ§Ã£o de Caixa d'Ãgua",
+    description: "InstalaÃ§Ã£o, limpeza e manutenÃ§Ã£o de caixas d'Ã¡gua e reservatÃ³rios."
   }
 ];
 
@@ -45,10 +45,10 @@ const ServicosSection = () => (
         className="text-center mb-16"
       >
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          Serviços de <span className="text-cyan-600">Encanador</span>
+          ServiÃ§os de <span className="text-cyan-600">Encanador</span>
         </h2>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          Soluções completas em hidráulica para residências e comércios em São Paulo
+          SoluÃ§Ãµes completas em hidrÃ¡ulica para residÃªncias e comÃ©rcios em SÃ£o Paulo
         </p>
       </motion.div>
 
